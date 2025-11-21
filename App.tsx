@@ -134,7 +134,7 @@ const App: React.FC = () => {
         
         {/* Header */}
         <div className="text-center space-y-2">
-          <div className="mx-auto h-12 w-12 bg-blue-600 rounded-xl flex items-center justify-center shadow-lg shadow-blue-200">
+          <div className="mx-auto h-12 w-12 bg-teal-600 rounded-xl flex items-center justify-center shadow-lg shadow-teal-200">
             <UserPlus className="h-6 w-6 text-white" />
           </div>
           <h1 className="text-3xl font-extrabold text-slate-900 tracking-tight">Employee Registration</h1>
@@ -201,7 +201,7 @@ const App: React.FC = () => {
                             onChange={(e) => handleChange('gender', e.target.value)}
                             className="peer sr-only"
                           />
-                          <div className="w-5 h-5 border-2 border-slate-300 rounded-full peer-checked:border-blue-600 peer-checked:border-[6px] transition-all duration-200 bg-white"></div>
+                          <div className="w-5 h-5 border-2 border-slate-300 rounded-full peer-checked:border-teal-600 peer-checked:border-[6px] transition-all duration-200 bg-white"></div>
                         </div>
                         <span className="text-sm text-slate-700 group-hover:text-slate-900">{option}</span>
                       </label>
@@ -255,8 +255,8 @@ const App: React.FC = () => {
                 <label className="text-sm font-medium text-slate-700">Hobbies <span className="text-red-500">*</span></label>
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
                   {HOBBY_OPTIONS.map((hobby) => (
-                    <label key={hobby} className={`flex items-center gap-3 p-3 border rounded-lg cursor-pointer transition-all ${formData.hobbies.includes(hobby) ? 'border-blue-500 bg-blue-50' : 'border-slate-200 hover:bg-slate-50'}`}>
-                      <div className={`w-4 h-4 rounded border flex items-center justify-center transition-colors ${formData.hobbies.includes(hobby) ? 'bg-blue-500 border-blue-500' : 'border-slate-300 bg-white'}`}>
+                    <label key={hobby} className={`flex items-center gap-3 p-3 border rounded-lg cursor-pointer transition-all ${formData.hobbies.includes(hobby) ? 'border-teal-500 bg-teal-50' : 'border-slate-200 hover:bg-slate-50'}`}>
+                      <div className={`w-4 h-4 rounded border flex items-center justify-center transition-colors ${formData.hobbies.includes(hobby) ? 'bg-teal-500 border-teal-500' : 'border-slate-300 bg-white'}`}>
                          {formData.hobbies.includes(hobby) && <CheckCircle className="w-3 h-3 text-white" />}
                       </div>
                       <input
@@ -266,7 +266,7 @@ const App: React.FC = () => {
                         onChange={(e) => handleCheckboxChange(e, hobby)}
                         className="sr-only"
                       />
-                      <span className={`text-sm ${formData.hobbies.includes(hobby) ? 'text-blue-800 font-medium' : 'text-slate-600'}`}>{hobby}</span>
+                      <span className={`text-sm ${formData.hobbies.includes(hobby) ? 'text-teal-800 font-medium' : 'text-slate-600'}`}>{hobby}</span>
                     </label>
                   ))}
                 </div>
@@ -281,8 +281,8 @@ const App: React.FC = () => {
                   value={formData.address}
                   onChange={(e) => handleChange('address', e.target.value)}
                   className={`w-full rounded-lg border ${
-                    errors.address ? 'border-red-500 focus:ring-red-200' : 'border-slate-300 focus:ring-blue-200'
-                  } bg-white px-4 py-2.5 text-slate-900 focus:border-blue-500 focus:outline-none focus:ring-4 focus:ring-opacity-20 transition-all duration-200`}
+                    errors.address ? 'border-red-500 focus:ring-red-200' : 'border-slate-300 focus:ring-teal-200'
+                  } bg-white px-4 py-2.5 text-slate-900 focus:border-teal-500 focus:outline-none focus:ring-4 focus:ring-opacity-20 transition-all duration-200`}
                   placeholder="Enter full address..."
                 />
                 {errors.address && <span className="text-xs font-medium text-red-500">{errors.address}</span>}
@@ -301,7 +301,7 @@ const App: React.FC = () => {
                     <div className="flex text-sm text-slate-600 justify-center">
                       <label
                         htmlFor="file-upload"
-                        className="relative cursor-pointer rounded-md font-medium text-blue-600 hover:text-blue-500 focus-within:outline-none"
+                        className="relative cursor-pointer rounded-md font-medium text-teal-600 hover:text-teal-500 focus-within:outline-none"
                       >
                         <span>Upload a file</span>
                         <input id="file-upload" name="profilePhoto" type="file" className="sr-only" accept="image/*" onChange={handleFileChange} />
@@ -329,7 +329,7 @@ const App: React.FC = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="flex items-center gap-2 px-8 py-2.5 rounded-lg bg-blue-600 text-white font-medium hover:bg-blue-700 active:bg-blue-800 transition-all shadow-lg shadow-blue-200 focus:ring-4 focus:ring-blue-100 disabled:opacity-70 disabled:cursor-not-allowed"
+                className="flex items-center gap-2 px-8 py-2.5 rounded-lg bg-teal-600 text-white font-medium hover:bg-teal-700 active:bg-teal-800 transition-all shadow-lg shadow-teal-200 focus:ring-4 focus:ring-teal-100 disabled:opacity-70 disabled:cursor-not-allowed"
               >
                 {isSubmitting ? (
                   <>

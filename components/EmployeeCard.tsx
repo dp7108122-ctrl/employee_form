@@ -9,7 +9,7 @@ interface EmployeeCardProps {
 export const EmployeeCard: React.FC<EmployeeCardProps> = ({ data }) => {
   return (
     <div className="animate-slide-up bg-white rounded-2xl shadow-xl overflow-hidden border border-slate-100 max-w-2xl mx-auto mt-8">
-      <div className="bg-gradient-to-r from-blue-600 to-indigo-600 px-6 py-8 text-white text-center relative">
+      <div className="bg-gradient-to-r from-teal-600 to-emerald-600 px-6 py-8 text-white text-center relative">
         <div className="absolute inset-0 bg-white/10 pattern-grid-lg opacity-20"></div>
         
         <div className="relative z-10 flex flex-col items-center">
@@ -21,7 +21,7 @@ export const EmployeeCard: React.FC<EmployeeCardProps> = ({ data }) => {
             )}
           </div>
           <h2 className="text-3xl font-bold tracking-tight">{data.fullName}</h2>
-          <div className="flex items-center gap-2 mt-2 text-blue-100 bg-white/20 px-3 py-1 rounded-full text-sm backdrop-blur-sm">
+          <div className="flex items-center gap-2 mt-2 text-teal-100 bg-white/20 px-3 py-1 rounded-full text-sm backdrop-blur-sm">
             <Briefcase className="w-4 h-4" />
             <span>{data.department}</span>
           </div>
@@ -32,7 +32,7 @@ export const EmployeeCard: React.FC<EmployeeCardProps> = ({ data }) => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="space-y-4">
              <div className="flex items-start gap-3">
-              <div className="p-2 bg-blue-50 rounded-lg text-blue-600">
+              <div className="p-2 bg-teal-50 rounded-lg text-teal-600">
                 <Mail className="w-5 h-5" />
               </div>
               <div>
@@ -42,7 +42,7 @@ export const EmployeeCard: React.FC<EmployeeCardProps> = ({ data }) => {
             </div>
 
             <div className="flex items-start gap-3">
-              <div className="p-2 bg-blue-50 rounded-lg text-blue-600">
+              <div className="p-2 bg-teal-50 rounded-lg text-teal-600">
                 <Phone className="w-5 h-5" />
               </div>
               <div>
@@ -52,7 +52,7 @@ export const EmployeeCard: React.FC<EmployeeCardProps> = ({ data }) => {
             </div>
 
             <div className="flex items-start gap-3">
-              <div className="p-2 bg-blue-50 rounded-lg text-blue-600">
+              <div className="p-2 bg-teal-50 rounded-lg text-teal-600">
                 <User className="w-5 h-5" />
               </div>
               <div>
@@ -64,7 +64,7 @@ export const EmployeeCard: React.FC<EmployeeCardProps> = ({ data }) => {
 
           <div className="space-y-4">
              <div className="flex items-start gap-3">
-              <div className="p-2 bg-blue-50 rounded-lg text-blue-600">
+              <div className="p-2 bg-teal-50 rounded-lg text-teal-600">
                 <Calendar className="w-5 h-5" />
               </div>
               <div>
@@ -79,7 +79,7 @@ export const EmployeeCard: React.FC<EmployeeCardProps> = ({ data }) => {
             </div>
 
             <div className="flex items-start gap-3">
-              <div className="p-2 bg-blue-50 rounded-lg text-blue-600">
+              <div className="p-2 bg-teal-50 rounded-lg text-teal-600">
                 <MapPin className="w-5 h-5" />
               </div>
               <div>
@@ -92,7 +92,7 @@ export const EmployeeCard: React.FC<EmployeeCardProps> = ({ data }) => {
 
         <div className="border-t border-slate-100 pt-6">
           <div className="flex items-start gap-3 mb-3">
-            <Award className="w-5 h-5 text-blue-600 mt-0.5" />
+            <Award className="w-5 h-5 text-teal-600 mt-0.5" />
             <p className="text-xs font-medium text-slate-500 uppercase tracking-wider">Skills</p>
           </div>
           <div className="flex flex-wrap gap-2 pl-8">
@@ -106,12 +106,12 @@ export const EmployeeCard: React.FC<EmployeeCardProps> = ({ data }) => {
 
         <div className="border-t border-slate-100 pt-6">
           <div className="flex items-start gap-3 mb-3">
-            <Heart className="w-5 h-5 text-pink-500 mt-0.5" />
+            <Heart className="w-5 h-5 text-purple-500 mt-0.5" />
             <p className="text-xs font-medium text-slate-500 uppercase tracking-wider">Hobbies</p>
           </div>
           <div className="flex flex-wrap gap-2 pl-8">
             {data.hobbies.map(hobby => (
-              <span key={hobby} className="px-3 py-1 bg-pink-50 text-pink-700 rounded-full text-sm font-medium border border-pink-100">
+              <span key={hobby} className="px-3 py-1 bg-purple-50 text-purple-700 rounded-full text-sm font-medium border border-purple-100">
                 {hobby}
               </span>
             ))}

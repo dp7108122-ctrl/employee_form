@@ -18,8 +18,8 @@ export const FormInput: React.FC<FormInputProps> = ({ label, error, prefix, clas
         )}
         <input
           className={`w-full rounded-lg border ${
-            error ? 'border-red-500 focus:ring-red-200' : 'border-slate-300 focus:ring-blue-200'
-          } bg-white px-4 py-2.5 text-slate-900 focus:border-blue-500 focus:outline-none focus:ring-4 focus:ring-opacity-20 transition-all duration-200 ${
+            error ? 'border-red-500 focus:ring-red-200' : 'border-slate-300 focus:ring-teal-200'
+          } bg-white px-4 py-2.5 text-slate-900 focus:border-teal-500 focus:outline-none focus:ring-4 focus:ring-opacity-20 transition-all duration-200 ${
             prefix ? 'pl-14' : ''
           } ${className}`}
           {...props}

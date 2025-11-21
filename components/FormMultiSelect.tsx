@@ -40,8 +40,8 @@ export const FormMultiSelect: React.FC<FormMultiSelectProps> = ({ label, options
           type="button"
           onClick={() => setIsOpen(!isOpen)}
           className={`w-full text-left rounded-lg border ${
-            error ? 'border-red-500 focus:ring-red-200' : 'border-slate-300 focus:ring-blue-200'
-          } bg-white px-4 py-2.5 text-slate-900 focus:border-blue-500 focus:outline-none focus:ring-4 focus:ring-opacity-20 transition-all duration-200 flex justify-between items-center`}
+            error ? 'border-red-500 focus:ring-red-200' : 'border-slate-300 focus:ring-teal-200'
+          } bg-white px-4 py-2.5 text-slate-900 focus:border-teal-500 focus:outline-none focus:ring-4 focus:ring-opacity-20 transition-all duration-200 flex justify-between items-center`}
         >
           <span className={`block truncate ${value.length === 0 ? 'text-slate-400' : ''}`}>
             {value.length > 0 ? `${value.length} selected` : 'Select skills...'}
@@ -57,12 +57,12 @@ export const FormMultiSelect: React.FC<FormMultiSelectProps> = ({ label, options
                 <div
                   key={option}
                   onClick={() => toggleOption(option)}
-                  className={`relative cursor-pointer select-none py-2 pl-3 pr-9 hover:bg-blue-50 ${
-                    isSelected ? 'bg-blue-50 text-blue-900' : 'text-slate-900'
+                  className={`relative cursor-pointer select-none py-2 pl-3 pr-9 hover:bg-teal-50 ${
+                    isSelected ? 'bg-teal-50 text-teal-900' : 'text-slate-900'
                   }`}
                 >
                   <div className="flex items-center">
-                    <div className={`mr-3 flex h-4 w-4 items-center justify-center rounded border ${isSelected ? 'border-blue-500 bg-blue-500' : 'border-slate-300'}`}>
+                    <div className={`mr-3 flex h-4 w-4 items-center justify-center rounded border ${isSelected ? 'border-teal-500 bg-teal-500' : 'border-slate-300'}`}>
                         {isSelected && <Check className="h-3 w-3 text-white" />}
                     </div>
                     <span className={`block truncate ${isSelected ? 'font-semibold' : 'font-normal'}`}>
@@ -77,7 +77,7 @@ export const FormMultiSelect: React.FC<FormMultiSelectProps> = ({ label, options
       </div>
       <div className="flex flex-wrap gap-1 mt-1">
         {value.map((v) => (
-            <span key={v} className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-blue-100 text-blue-800">
+            <span key={v} className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-teal-100 text-teal-800">
                 {v}
             </span>
         ))}
